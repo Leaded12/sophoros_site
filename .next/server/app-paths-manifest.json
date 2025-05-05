@@ -1,0 +1,7 @@
+{
+  "/page": "app/page.js",
+  "/why-us/page": "app/why-us/page.js",
+  "/resources/page": "app/resources/page.js",
+  "/solutions/page": "app/solutions/page.js",
+  "/get-started/page": "app/get-started/page.js"
+}

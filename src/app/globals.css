@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-rgb: 249, 250, 252;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
+  min-height: 100vh;
+  @apply font-montserrat;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-open-sans), system-ui, sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-ibm-plex), system-ui, sans-serif;
+  }
+  
+  code, pre {
+    font-family: var(--font-roboto-mono), monospace;
+  }
+}
+
+html, body {
+  @apply font-montserrat;
+} 
