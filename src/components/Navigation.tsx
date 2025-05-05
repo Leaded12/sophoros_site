@@ -36,13 +36,13 @@ const Navigation = () => {
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
       className={`fixed w-full z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white shadow-md' : 'bg-transparent'
+        isScrolled ? 'bg-white shadow-md border-b border-slate-gray/10' : 'bg-transparent'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
+        <div className="flex justify-between items-center h-16">
           {/* Logo and Company Name */}
-          <Link href="/" className="flex items-center space-x-4 py-2">
+          <Link href="/" className="flex items-center space-x-4 py-1">
             <Image
               src="/logo.svg"
               alt="Sophoros Consulting Logo"
@@ -59,15 +59,13 @@ const Navigation = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-5">
             <a href="/" className={`text-sm font-medium transition-colors duration-200 ${useScrolledStyle ? 'text-slate-gray hover:text-midnight-navy' : 'text-white hover:text-sky-teal'}`}>Home</a>
             <a href="/solutions" className={`text-sm font-medium transition-colors duration-200 ${useScrolledStyle ? 'text-slate-gray hover:text-midnight-navy' : 'text-white hover:text-sky-teal'}`}>Solutions</a>
             <a href="/why-us" className={`text-sm font-medium transition-colors duration-200 ${useScrolledStyle ? 'text-slate-gray hover:text-midnight-navy' : 'text-white hover:text-sky-teal'}`}>Why Us</a>
-            <a href="/resources" className={`text-sm font-medium transition-colors duration-200 ${useScrolledStyle ? 'text-slate-gray hover:text-midnight-navy' : 'text-white hover:text-sky-teal'}`}>Resources</a>
-            <a href="/get-started" className={`text-sm font-medium transition-colors duration-200 ${useScrolledStyle ? 'text-slate-gray hover:text-midnight-navy' : 'text-white hover:text-sky-teal'}`}>Contact</a>
             <Link
               href="/get-started"
-              className="bg-sky-teal text-midnight-navy px-6 py-2 rounded-md font-semibold hover:bg-sky-teal/90 transition-colors duration-200"
+              className="bg-sky-teal text-midnight-navy px-7 py-2 rounded-lg font-semibold shadow-md hover:bg-sky-teal/90 transition-colors duration-200 ml-2 text-base"
             >
               Get Started
             </Link>
@@ -119,13 +117,6 @@ const Navigation = () => {
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Why Us
-              </Link>
-              <Link
-                href="/resources"
-                className="text-slate-gray hover:text-midnight-navy transition-colors duration-200"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Resources
               </Link>
               <Link
                 href="/get-started"
